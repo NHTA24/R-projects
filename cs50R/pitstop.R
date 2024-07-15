@@ -1,1 +1,11 @@
 
+file_name <- readline("What's your file name? ")
+read_file <- read.csv(file_name)
+read_length <- length(read_file$time)
+read_longest <- max(read_file$time)
+read_shortest <- min(read_file$time)
+read_total <- sum(read_file$time)
+print(paste("The total number of pit stops:", read_length))
+print(paste("The duration of the shortest pit stop:", read_shortest))
+print(paste("The duration of the longest pit stop:", read_longest))
+print(paste("The total time spent on pit stops during the race, across all racers:", read_total))
